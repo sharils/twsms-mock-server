@@ -12,13 +12,14 @@ const respond = (res, statusCode, contentType, body) => {
 };
 
 const server = http.createServer((req, res) => {
-  console.log(`${req.method} ${req.url}`)
+  const url = decodeURI(req.url).replace(/\+/g, ' ');
+  console.log(`${req.method} ${url}`);
   switch (req.method) {
     case 'GET':
-      respond(res, 200, 'application/json', JSON.stringify(cachedPostUrl));
+      respond(res, 200, 'application/json', cachedPostUrl);
       break;
     case 'POST':
-      cachedPostUrl = req.url;
+      cachedPostUrl = url;
       respond(
         res,
         200,
