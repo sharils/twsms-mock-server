@@ -1,7 +1,7 @@
 const http = require('http');
 
 const hostname = '0.0.0.0';
-const {PORT = '3000'} = process.env;
+const {PORT = '3001'} = process.env;
 
 let cachedPostUrl = null;
 
