@@ -23,5 +23,5 @@ docker build --tag smutdose/twsms-mock-server .
 Start a dockerised server.
 
 ```sh
-docker run --rm --publish 3000:3000 smutdose/twsms-mock-server
+docker run --rm --publish 3001:3001 smutdose/twsms-mock-server
 ```

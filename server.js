@@ -12,6 +12,7 @@ const respond = (res, statusCode, contentType, body) => {
 };
 
 const server = http.createServer((req, res) => {
+  console.log(`${req.method} ${req.url}`)
   switch (req.method) {
     case 'GET':
       respond(res, 200, 'application/json', JSON.stringify(cachedPostUrl));
