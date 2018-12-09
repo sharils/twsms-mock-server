@@ -19,7 +19,7 @@ const server = http.createServer((req, res) => {
       respond(res, 200, 'application/json', cachedPostUrl);
       break;
     case 'POST':
-      cachedPostUrl = url;
+      cachedPostUrl = JSON.stringify(url);
       respond(
         res,
         200,
