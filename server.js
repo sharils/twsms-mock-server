@@ -23,8 +23,8 @@ const server = http.createServer((req, res) => {
       respond(
         res,
         200,
-        'text/xml',
-        '<smsResp><code>12345</code><text>Success</text><msgid>123456789</msgid></smsResp>',
+        'text/html',
+        '{"code":"00000","text":"Success","msgid":123456789}',
       );
       break;
   }
