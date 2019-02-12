@@ -24,7 +24,7 @@ const server = http.createServer((req, res) => {
         res,
         200,
         'text/html',
-        '{"code":"00000","text":"Success","msgid":304299191}',
+        '{"code":"00000","text":"Success","msgid":123456789}',
       );
       break;
   }
